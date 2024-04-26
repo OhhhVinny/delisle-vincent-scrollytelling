@@ -1,4 +1,4 @@
-gsap.to(".scroll-down", {
+gsap.to(".defilement", {
   y: 10,
   duration: 1,
   repeat: -1,

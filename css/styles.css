@@ -1,3 +1,6 @@
+/*--------------------------------------------------------- 
+--------------------Styles Généraux-----------------------
+---------------------------------------------------------*/
 :root {
   --vertSombre: #295921;
   --kaki: #45663f;
@@ -15,7 +18,10 @@
 
 body {
   font-family: "munday";
-  height: 2000px; /* Hauteur temporaire pour tester le défilement */
+  height: 20000px; /* Hauteur temporaire pour tester le défilement */
+  text-align: center;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 header {
@@ -24,16 +30,12 @@ header {
   background-image: url("../img/img_arriere_plan/intro/background_intro.svg");
   background-size: cover;
   background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
+  position: relative;
 }
 
 header h1 {
-  position: absolute;
-  top: 1vw;
+  top: 1vh;
   margin: 20px;
   font-size: 6vw;
   color: white;
@@ -42,33 +44,25 @@ header h1 {
 
 header p {
   position: absolute;
-  bottom: 1vw;
-  font-size: 11px;
-  font-weight: bold;
-  color: white;
-  text-shadow: 0px 1px 0px black;
-}
-
-header div {
-  position: absolute;
-  top: 575px;
-  text-align: center;
-  text-shadow: 0px 1px 0px black;
-  font-size: 60px;
-}
-
-header a:hover {
-  background-color: white;
-  color: black;
-}
-
-.scroll-down {
-  position: absolute;
-  bottom: 20px;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   color: white;
-  text-decoration: none;
+  text-shadow: 1px 3px 1px black;
+  font-size: 12px;
+  width: 100%;
+  text-align: center;
+}
+
+.defilement {
+  border: 1px solid red;
+  position: absolute;
+  font-size: 60px;
+  bottom: 120px;
+  left: 50%;
+  height: auto;
+  transform: translateX(-50%);
+  color: white;
 }
 
 main {
@@ -85,7 +79,17 @@ section {
   border: 1px solid red; /* Bordure rouge temporaire */
 }
 
-#chapitre1 {
+footer {
+  text-align: center;
+  color: var(--jaune);
+  background-color: #000;
+}
+
+/*--------------------------------------------------------- 
+--------------------Chapitre 1-----------------------------
+---------------------------------------------------------*/
+
+section.chapitre1 {
   background-repeat: no-repeat;
 }
 
@@ -108,16 +112,38 @@ section {
   z-index: 1;
 }
 
+/*--------------------------------------------------------- 
+--------------------Chapitre 2-----------------------------
+---------------------------------------------------------*/
+
+/*--------------------------------------------------------- 
+--------------------Chapitre 3-----------------------------
+---------------------------------------------------------*/
+
+/*--------------------------------------------------------- 
+--------------------Chapitre 4-----------------------------
+---------------------------------------------------------*/
+
+/*--------------------------------------------------------- 
+--------------------Chapitre 5-----------------------------
+---------------------------------------------------------*/
+
+/*--------------------------------------------------------- 
+--------------------Chapitre 6-----------------------------
+---------------------------------------------------------*/
+
+/*--------------------------------------------------------- 
+--------------------Sprite---------------------------------
+---------------------------------------------------------*/
 .sprite {
-  width: 50%;
-  height: 100vh;
-  background-color: #000;
-  background-position: center;
-  background-size: cover;
-  overflow: auto;
+  width: 50vw;
+  aspect-ratio: 1/1;
+  background-size: 100% 4800%;
   background-image: url("../img/img_personnages/png/sprite/sprite_max_reveille.png");
   animation: playSprite 1s steps(48) infinite;
+  animation-play-state: running;
   border: 2px solid red;
+  margin: 0 auto;
 }
 
 body.is-scrolling .sprite {
@@ -126,9 +152,9 @@ body.is-scrolling .sprite {
 
 @keyframes playSprite {
   from {
-    background-position: 0px;
+    background-position: 0 0;
   }
   to {
-    background-position: -36000px;
+    background-position: 0 -4800%;
   }
 }
