@@ -22,6 +22,7 @@ body {
   text-align: center;
   overflow-x: hidden;
   width: 100%;
+  margin: 0;
 }
 
 header {
@@ -135,13 +136,31 @@ section.chapitre1 {
 /*--------------------------------------------------------- 
 --------------------Sprite---------------------------------
 ---------------------------------------------------------*/
-.sprite {
+.reveille {
   width: 50vw;
   aspect-ratio: 1/1;
   background-size: 100% 4800%;
   background-image: url("../img/img_personnages/png/sprite/sprite_max_reveille.png");
+  animation: playSprite 2s steps(48) infinite;
+  border: 2px solid red;
+  margin: 0 auto;
+}
+
+.dors {
+  width: 50vw;
+  aspect-ratio: 1/1;
+  background-size: 100% 4800%;
+  background-image: url("../img/img_personnages/png/sprite/sprite_max_dors.png");
   animation: playSprite 1s steps(48) infinite;
-  animation-play-state: running;
+  border: 2px solid red;
+  margin: 0 auto;
+}
+.dors {
+  width: 50vw;
+  aspect-ratio: 1/1;
+  background-size: 100% 4800%;
+  background-image: url("../img/img_personnages/png/sprite/sprite_max_dors.png");
+  animation: playSprite 1s steps(48) infinite;
   border: 2px solid red;
   margin: 0 auto;
 }
