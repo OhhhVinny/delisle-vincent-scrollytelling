@@ -21,7 +21,7 @@ body {
   height: 20000px; /* Hauteur temporaire pour tester le défilement */
   text-align: center;
   overflow-x: hidden;
-  width: 100%;
+  width: 100vw;
   margin: 0;
 }
 
@@ -56,7 +56,6 @@ header p {
 }
 
 .defilement {
-  border: 1px solid red;
   position: absolute;
   font-size: 60px;
   bottom: 120px;
@@ -67,16 +66,19 @@ header p {
 }
 
 main {
-  overflow-y: scroll;
   margin: 0;
 }
 
 section {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   margin: 0;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
   border: 1px solid red; /* Bordure rouge temporaire */
 }
 
@@ -91,47 +93,176 @@ footer {
 ---------------------------------------------------------*/
 
 section.chapitre1 {
-  background-repeat: no-repeat;
+  background-color: #000;
+  border: 1px solid rgb(218, 0, 0);
 }
 
-.layer {
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-.arriere {
-  z-index: -1;
+.devant-nuit {
+  position: absolute;
   top: 0;
-}
-
-.millieu {
-  z-index: 0;
-}
-
-.devant {
+  left: 0;
+  width: 100vw;
   z-index: 1;
+}
+
+.lune {
+  position: absolute;
+  width: 10vw;
+  top: 5vh;
+  right: 5vw;
+}
+
+.bg-nuit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+
+.texte1 {
+  position: absolute;
+  z-index: 2;
 }
 
 /*--------------------------------------------------------- 
 --------------------Chapitre 2-----------------------------
 ---------------------------------------------------------*/
 
+section.chapitre2 {
+  background-image: url("../img/img_arriere_plan/chapitre2/landscape_nuage.svg");
+}
+
+.nuage-avant {
+  position: absolute;
+  border: 1px solid rgb(218, 0, 0);
+  width: 100vw;
+  bottom: 0;
+  left: 0;
+}
+
+.nuage-arriere {
+  position: absolute;
+  border: 1px solid rgb(218, 0, 0);
+  width: 100vw;
+  top: 18vh;
+  left: 0;
+}
+
+.etoile-petite {
+  position: absolute;
+  border: 1px solid rgb(218, 0, 0);
+  width: 10vw;
+}
+
+.etoile-grande {
+  position: absolute;
+  border: 1px solid rgb(218, 0, 0);
+  width: 20vw;
+}
+
+.texte2 {
+  position: absolute;
+}
+
 /*--------------------------------------------------------- 
 --------------------Chapitre 3-----------------------------
 ---------------------------------------------------------*/
+
+section.chapitre3 {
+  background-image: url("../img/img_arriere_plan/chapitre3/etrange_structure.svg");
+}
+
+.texte3 {
+  position: absolute;
+}
 
 /*--------------------------------------------------------- 
 --------------------Chapitre 4-----------------------------
 ---------------------------------------------------------*/
 
+section.chapitre4 {
+  background-image: url("../img/img_arriere_plan/chapitre4/fond_enfer.svg");
+}
+
+.barreaux {
+  position: absolute;
+  width: 15vw;
+  top: 25vh;
+  left: 43vw;
+  border: 1px solid rgb(218, 0, 0);
+}
+
+.texte4 {
+  position: absolute;
+}
+
 /*--------------------------------------------------------- 
 --------------------Chapitre 5-----------------------------
 ---------------------------------------------------------*/
 
+section.chapitre5 {
+  background-image: url("../img/img_arriere_plan/chapitre5/piece_sommeil.svg");
+}
+
+.z-petit {
+  position: absolute;
+  border: 1px solid rgb(218, 0, 0);
+  width: 2vw;
+  bottom: 40vh;
+  left: 48vw;
+}
+
+.z-moyen {
+  position: absolute;
+  border: 1px solid rgb(218, 0, 0);
+  width: 4vw;
+  bottom: 42vh;
+  left: 50vw;
+}
+
+.z-grand {
+  position: absolute;
+  border: 1px solid rgb(218, 0, 0);
+  width: 6vw;
+  bottom: 46vh;
+  left: 53vw;
+}
+
+.texte5 {
+  position: absolute;
+}
+
 /*--------------------------------------------------------- 
 --------------------Chapitre 6-----------------------------
 ---------------------------------------------------------*/
+
+section.chapitre6 {
+  background-image: url("../img/img_arriere_plan/chapitre6/bg_jour_chapitre_final.svg");
+}
+
+.devant-jour {
+  position: absolute;
+  border: 1px solid rgb(218, 0, 0);
+  aspect-ratio: 16/9;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.soleil {
+  position: absolute;
+  border: 1px solid rgb(218, 0, 0);
+  width: 10vw;
+  top: 5vh;
+  right: 5vw;
+  z-index: 0;
+}
+
+.texte6 {
+  position: absolute;
+  z-index: 2;
+}
 
 /*--------------------------------------------------------- 
 --------------------Sprite---------------------------------
