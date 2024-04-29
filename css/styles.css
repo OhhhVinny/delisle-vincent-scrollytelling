@@ -89,6 +89,27 @@ footer {
   background-color: #000;
 }
 
+ul.technique-gsap{
+  background: rgba(0,0,0,0.3);
+  color: white;
+  font-size: 10px;
+  font-family: monospace;
+  font-weight: 400;
+  width: auto;
+  display: inline-block;
+  padding: 10px 20px 12px 20px;
+  margin: 0;
+  max-width: 300px;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+}
+
+ul.technique-gsap li{
+  margin: 5px 0;
+}
+
 /*--------------------------------------------------------- 
 --------------------Chapitre 1-----------------------------
 ---------------------------------------------------------*/
@@ -108,7 +129,7 @@ section.chapitre1 {
   height: 100vh;
   background-color: black;
   opacity: 0;
-  z-index: 3;
+  z-index: 2;
 }
 
 .devant-nuit {
@@ -161,6 +182,7 @@ section.chapitre2 {
   top: 25vh;
   right: 25vw;
   width: 9vw;
+  
 }
 
 .etoile-grande {
@@ -168,6 +190,7 @@ section.chapitre2 {
   top: 1vh;
   left: 40vw;
   width: 13vw;
+
 }
 
 .texte-2 {
