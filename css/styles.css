@@ -2,11 +2,11 @@
 --------------------Styles Généraux-----------------------
 ---------------------------------------------------------*/
 :root {
-  --vertSombre: #295921;
-  --kaki: #45663f;
-  --jaune: #e2e61c;
-  --mauve: #c51be5;
-  --violet: #603f66;
+  --rose: #c7214d;
+  --vert: #00a468;
+  --orange: #f78f41;
+  --bleu: #28499f;
+  --jaune: #fede46;
   --noir: #000;
   --blanc: #fff;
 }
@@ -17,16 +17,15 @@
 }
 
 body {
-  font-family: "munday";
-  height: 20000px; /* Hauteur temporaire pour tester le défilement */
-  text-align: center;
-  overflow-x: hidden;
   width: 100vw;
   margin: 0;
+  font-family: "munday";
+  text-align: center;
+  overflow-x: hidden;
 }
 
 header {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background-image: url("../img/img_arriere_plan/intro/background_intro.svg");
   background-size: cover;
@@ -73,6 +72,7 @@ section {
   width: 100vw;
   height: 100vh;
   margin: 0;
+  background-color: #000;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -83,6 +83,7 @@ section {
 }
 
 footer {
+  margin: 0;
   text-align: center;
   color: var(--jaune);
   background-color: #000;
@@ -94,12 +95,25 @@ footer {
 
 section.chapitre1 {
   background-color: #000;
+  background-image: url("../img/img_arriere_plan/chapitre1/bg_nuit_chapitre1.svg");
+  background-position: 50% 50%;
   border: 1px solid rgb(218, 0, 0);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0;
+  z-index: 3;
 }
 
 .devant-nuit {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100vw;
   z-index: 1;
@@ -108,19 +122,16 @@ section.chapitre1 {
 .lune {
   position: absolute;
   width: 10vw;
+  top: 8vh;
+  right: 3vw;
+}
+
+.texte-1 {
+  position: absolute;
+  color: var(--blanc);
+  font-size: 3vw;
   top: 5vh;
-  right: 5vw;
-}
-
-.bg-nuit {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-}
-
-.texte1 {
-  position: absolute;
+  left: 8vw;
   z-index: 2;
 }
 
@@ -134,7 +145,6 @@ section.chapitre2 {
 
 .nuage-avant {
   position: absolute;
-  border: 1px solid rgb(218, 0, 0);
   width: 100vw;
   bottom: 0;
   left: 0;
@@ -142,26 +152,43 @@ section.chapitre2 {
 
 .nuage-arriere {
   position: absolute;
-  border: 1px solid rgb(218, 0, 0);
-  width: 100vw;
-  top: 18vh;
+  bottom: 8vh;
   left: 0;
 }
 
 .etoile-petite {
   position: absolute;
-  border: 1px solid rgb(218, 0, 0);
-  width: 10vw;
+  top: 25vh;
+  right: 25vw;
+  width: 9vw;
 }
 
 .etoile-grande {
   position: absolute;
-  border: 1px solid rgb(218, 0, 0);
-  width: 20vw;
+  top: 1vh;
+  left: 40vw;
+  width: 13vw;
 }
 
-.texte2 {
+.texte-2 {
   position: absolute;
+  color: var(--blanc);
+  font-size: 3vw;
+  top: 5vh;
+  left: 8vw;
+  z-index: 2;
+}
+
+.reveille2 {
+  position: absolute;
+  top: 0;
+  right: 35vw;
+  width: 10vw;
+  aspect-ratio: 1/1;
+  background-size: 100% 4800%;
+  background-image: url("../img/img_personnages/png/sprite/lyx_reveille.png");
+  animation: playSprite 2s steps(48) infinite;
+  margin: 0 auto;
 }
 
 /*--------------------------------------------------------- 
@@ -172,8 +199,25 @@ section.chapitre3 {
   background-image: url("../img/img_arriere_plan/chapitre3/etrange_structure.svg");
 }
 
-.texte3 {
+.texte-3 {
   position: absolute;
+  color: var(--blanc);
+  font-size: 3vw;
+  top: 5vh;
+  left: 8vw;
+  z-index: 2;
+}
+
+.reveille3 {
+  position: absolute;
+  top: 0;
+  right: 10vw;
+  width: 10vw;
+  aspect-ratio: 1/1;
+  background-size: 100% 4800%;
+  background-image: url("../img/img_personnages/png/sprite/lyx_reveille.png");
+  animation: playSprite 2s steps(48) infinite;
+  margin: 0 auto;
 }
 
 /*--------------------------------------------------------- 
@@ -181,19 +225,67 @@ section.chapitre3 {
 ---------------------------------------------------------*/
 
 section.chapitre4 {
-  background-image: url("../img/img_arriere_plan/chapitre4/fond_enfer.svg");
+  background-color: #000;
 }
 
 .barreaux {
   position: absolute;
-  width: 15vw;
-  top: 25vh;
-  left: 43vw;
-  border: 1px solid rgb(218, 0, 0);
+  width: 8vw;
+  bottom: 12vh;
+  left: 46.5vw;
+  z-index: 1;
 }
 
-.texte4 {
+.bg-temple {
   position: absolute;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.texte-4 {
+  position: absolute;
+  color: var(--blanc);
+  font-size: 3vw;
+  top: 5vh;
+  left: 8vw;
+  z-index: 3;
+  opacity: 1;
+}
+
+.texte-voix1 {
+  position: absolute;
+  color: var(--blanc);
+  font-size: 6vw;
+  top: 30vh;
+  left: 45vw;
+  z-index: 3;
+  opacity: 0;
+}
+
+.texte-voix2 {
+  position: absolute;
+  color: var(--blanc);
+  font-size: 6vw;
+  top: 30vh;
+  left: 37vw;
+  z-index: 3;
+  opacity: 0;
+}
+
+.reveille4 {
+  position: absolute;
+  bottom: 0;
+  left: 50vw;
+  width: 10vw;
+  aspect-ratio: 1/1;
+  background-size: 100% 4800%;
+  background-image: url("../img/img_personnages/png/sprite/lyx_reveille.png");
+  animation: playSprite 2s steps(48) infinite;
+  border: 2px solid red;
+  margin: 0 auto;
+  z-index: 3;
 }
 
 /*--------------------------------------------------------- 
@@ -206,30 +298,46 @@ section.chapitre5 {
 
 .z-petit {
   position: absolute;
-  border: 1px solid rgb(218, 0, 0);
   width: 2vw;
   bottom: 40vh;
-  left: 48vw;
+  left: 50vw;
 }
 
 .z-moyen {
   position: absolute;
-  border: 1px solid rgb(218, 0, 0);
   width: 4vw;
   bottom: 42vh;
-  left: 50vw;
+  left: 52vw;
 }
 
 .z-grand {
   position: absolute;
-  border: 1px solid rgb(218, 0, 0);
   width: 6vw;
-  bottom: 46vh;
-  left: 53vw;
+  bottom: 48vh;
+  left: 56vw;
 }
 
-.texte5 {
+.texte-5 {
   position: absolute;
+  color: var(--blanc);
+  font-size: 3vw;
+  top: 5vh;
+  left: 8vw;
+  z-index: 2;
+}
+
+.reveille5 {
+  position: absolute;
+  bottom: 20vh;
+  left: 0vw;
+  width: 15vw;
+  aspect-ratio: 1/1;
+  background-size: 100% 4800%;
+  background-image: url("../img/img_personnages/png/sprite/lyx_reveille.png");
+  animation: playSprite 2s steps(48) infinite;
+  border: 2px solid red;
+  margin: 0 auto;
+  z-index: 2;
 }
 
 /*--------------------------------------------------------- 
@@ -238,62 +346,51 @@ section.chapitre5 {
 
 section.chapitre6 {
   background-image: url("../img/img_arriere_plan/chapitre6/bg_jour_chapitre_final.svg");
+  background-position: 50% 50%;
+  background-color: #000;
 }
 
 .devant-jour {
   position: absolute;
-  border: 1px solid rgb(218, 0, 0);
-  aspect-ratio: 16/9;
-  width: 100vw;
-  top: 0;
+  bottom: 0;
   left: 0;
+  width: 100vw;
   z-index: 1;
 }
 
 .soleil {
   position: absolute;
-  border: 1px solid rgb(218, 0, 0);
   width: 10vw;
-  top: 5vh;
-  right: 5vw;
+  top: 8vh;
+  right: 3vw;
   z-index: 0;
 }
 
-.texte6 {
+.texte-6 {
   position: absolute;
+  color: var(--blanc);
+  font-size: 3vw;
+  top: 5vh;
+  left: 8vw;
   z-index: 2;
 }
 
 /*--------------------------------------------------------- 
 --------------------Sprite---------------------------------
 ---------------------------------------------------------*/
-.reveille {
-  width: 50vw;
+
+.dors {
+  position: absolute;
+  bottom: 20vh;
+  left: 40vw;
+  width: 15vw;
   aspect-ratio: 1/1;
   background-size: 100% 4800%;
-  background-image: url("../img/img_personnages/png/sprite/sprite_max_reveille.png");
+  background-image: url("../img/img_personnages/png/sprite/lyx_dors.png");
   animation: playSprite 2s steps(48) infinite;
   border: 2px solid red;
   margin: 0 auto;
-}
-
-.dors {
-  width: 50vw;
-  aspect-ratio: 1/1;
-  background-size: 100% 4800%;
-  background-image: url("../img/img_personnages/png/sprite/sprite_max_dors.png");
-  animation: playSprite 1s steps(48) infinite;
-  border: 2px solid red;
-  margin: 0 auto;
-}
-.dors {
-  width: 50vw;
-  aspect-ratio: 1/1;
-  background-size: 100% 4800%;
-  background-image: url("../img/img_personnages/png/sprite/sprite_max_dors.png");
-  animation: playSprite 1s steps(48) infinite;
-  border: 2px solid red;
-  margin: 0 auto;
+  opacity: 0.5;
 }
 
 body.is-scrolling .sprite {
