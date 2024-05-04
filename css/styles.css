@@ -89,8 +89,8 @@ footer {
   background-color: #000;
 }
 
-ul.technique-gsap{
-  background: rgba(0,0,0,0.3);
+ul.technique-gsap {
+  background: rgba(0, 0, 0, 0.3);
   color: white;
   font-size: 10px;
   font-family: monospace;
@@ -106,7 +106,7 @@ ul.technique-gsap{
   left: 0;
 }
 
-ul.technique-gsap li{
+ul.technique-gsap li {
   margin: 5px 0;
 }
 
@@ -182,7 +182,6 @@ section.chapitre2 {
   top: 25vh;
   right: 25vw;
   width: 9vw;
-  
 }
 
 .etoile-grande {
@@ -190,7 +189,6 @@ section.chapitre2 {
   top: 1vh;
   left: 40vw;
   width: 13vw;
-
 }
 
 .texte-2 {
@@ -257,6 +255,7 @@ section.chapitre4 {
   bottom: 12vh;
   left: 46.5vw;
   z-index: 1;
+  border: 2px solid red;
 }
 
 .bg-temple {
@@ -323,21 +322,21 @@ section.chapitre5 {
   position: absolute;
   width: 2vw;
   bottom: 40vh;
-  left: 50vw;
+  left: 52vw;
 }
 
 .z-moyen {
   position: absolute;
   width: 4vw;
   bottom: 42vh;
-  left: 52vw;
+  left: 55vw;
 }
 
 .z-grand {
   position: absolute;
   width: 6vw;
   bottom: 48vh;
-  left: 56vw;
+  left: 60vw;
 }
 
 .texte-5 {
