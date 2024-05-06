@@ -22,6 +22,7 @@ body {
   font-family: "munday";
   text-align: center;
   overflow-x: hidden;
+  background-color: var(--noir);
 }
 
 header {
@@ -107,6 +108,7 @@ ul.technique-gsap {
 
 ul.technique-gsap li {
   margin: 5px 0;
+  text-align: left;
 }
 
 /*--------------------------------------------------------- 
@@ -293,7 +295,7 @@ section.chapitre4 {
 .barreaux {
   position: absolute;
   width: 8vw;
-  bottom: 12vh;
+  top: 60vh;
   left: 46.5vw;
   z-index: 1;
 }
@@ -338,7 +340,7 @@ section.chapitre4 {
 
 .reveille4 {
   position: absolute;
-  bottom: 0;
+  top: 80vh;
   left: 50vw;
   width: 10vw;
   aspect-ratio: 1/1;
