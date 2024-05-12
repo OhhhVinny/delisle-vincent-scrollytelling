@@ -22,7 +22,6 @@ body {
   font-family: "munday";
   text-align: center;
   overflow-x: hidden;
-  background-color: var(--noir);
 }
 
 header {
@@ -37,7 +36,7 @@ header {
 
 header h1 {
   top: 1vh;
-  margin: 20px;
+  margin: 0;
   font-size: 6vw;
   color: white;
   text-shadow: 1px 3px 1px black;
@@ -84,9 +83,14 @@ section {
 
 footer {
   margin: 0;
+  padding: 2vh;
   text-align: center;
   color: var(--jaune);
-  background-color: #000;
+  background-color: #000000;
+}
+footer p {
+  margin: 0;
+  padding: 2vh;
 }
 
 ul.technique-gsap {
@@ -109,6 +113,7 @@ ul.technique-gsap {
 ul.technique-gsap li {
   margin: 5px 0;
   text-align: left;
+  display: none;
 }
 
 /*--------------------------------------------------------- 

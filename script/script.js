@@ -127,7 +127,6 @@ etoilesDraw
   );
 */
 
-
 /////////////////////////////////
 ////////  Chapitre 3  ///////////
 /////////////////////////////////
@@ -171,7 +170,7 @@ const chapitre4 = gsap.timeline({
 chapitre4
   .to(".barreaux", { y: "-25vh", duration: 30, ease: "sine", delay: 10 })
   // Plugins GSAP payants
- /*
+  /*
   .to(".x-morph", {
     duration: 5,
     morphSVG: {
