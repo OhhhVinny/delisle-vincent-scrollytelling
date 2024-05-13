@@ -2,10 +2,8 @@
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(MotionPathPlugin);
 // Plugins GSAP payants
-/*
 gsap.registerPlugin(DrawSVGPlugin);
 gsap.registerPlugin(MorphSVGPlugin);
-*/
 
 // Animation de l'Appel à l'action de l'intro
 gsap.to(".defilement", {
@@ -90,7 +88,6 @@ gsap.to(".reveille2", {
 
 // timeline pour les animations DrawSVG des étoiles
 // Plugins GSAP payants
-/*
 const etoilesDraw = gsap.timeline({
   paused: true,
   scrollTrigger: {
@@ -125,7 +122,6 @@ etoilesDraw
     { drawSVG: "100%", duration: 5 },
     "<"
   );
-*/
 
 /////////////////////////////////
 ////////  Chapitre 3  ///////////
@@ -170,14 +166,13 @@ const chapitre4 = gsap.timeline({
 chapitre4
   .to(".barreaux", { y: "-25vh", duration: 30, ease: "sine", delay: 10 })
   // Plugins GSAP payants
-  /*
   .to(".x-morph", {
     duration: 5,
     morphSVG: {
       shape: ".check-morph",
     },
   })
-*/
+
   .to(".bg-temple", { scale: 2, duration: 15, ease: "sine", delay: 10 })
   .to(".bg-temple", { y: "-30vh", duration: 15, ease: "sine" }, "<")
   .to(".barreaux", { opacity: 0, duration: 0.1 }, "<")
