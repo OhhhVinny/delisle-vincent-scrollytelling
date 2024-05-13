@@ -5,7 +5,6 @@ Optimisation Web - [Projet Scrollytelling](https://tim-montmorency.com/timdoc/58
 
 ## Conception
 - Vincent Delisle
-- Tristan Khadka
 
 ## Développement/programmation
 - Vincent Delisle
