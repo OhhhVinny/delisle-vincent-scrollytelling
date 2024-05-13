@@ -84,8 +84,8 @@ gsap.to(".reveille2", {
     scrub: 3,
   },
   duration: 2,
-  backgroundPositionY: "4800%",
-  ease: "steps(48)",
+  backgroundPositionY: "1200%",
+  ease: "steps(12)",
 });
 
 // timeline pour les animations DrawSVG des étoiles
@@ -199,8 +199,8 @@ gsap.to(".reveille4", {
     scrub: 3,
   },
   duration: 2,
-  backgroundPositionY: "4800%",
-  ease: "steps(48)",
+  backgroundPositionY: "1200%",
+  ease: "steps(12)",
 });
 
 /////////////////////////////////
@@ -248,8 +248,8 @@ gsap.to(".reveille5", {
     scrub: 3,
   },
   duration: 1,
-  backgroundPositionY: "4800%",
-  ease: "steps(48)",
+  backgroundPositionY: "1200%",
+  ease: "steps(12)",
 });
 
 gsap.to(".dors", {
@@ -261,8 +261,8 @@ gsap.to(".dors", {
     scrub: 3,
   },
   duration: 1,
-  backgroundPositionY: "4800%",
-  ease: "steps(48)",
+  backgroundPositionY: "1200%",
+  ease: "steps(12)",
 });
 
 /////////////////////////////////

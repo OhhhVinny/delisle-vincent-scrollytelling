@@ -225,8 +225,8 @@ section.chapitre2 {
   right: 35vw;
   width: 10vw;
   aspect-ratio: 1/1;
-  background-size: 100% 4800%;
-  background-image: url("../img/img_personnages/png/sprite/lyx_reveille.png");
+  background-size: 100% 1200%;
+  background-image: url("../img/img_personnages/png/sprite/lyx_reveille_optimise.png");
   margin: 0 auto;
   z-index: 1;
 }
@@ -265,8 +265,8 @@ section.chapitre3 {
   right: 10vw;
   width: 10vw;
   aspect-ratio: 1/1;
-  background-size: 100% 4800%;
-  background-image: url("../img/img_personnages/png/sprite/lyx_reveille.png");
+  background-size: 100% 1200%;
+  background-image: url("../img/img_personnages/png/sprite/lyx_reveille_optimise.png");
   margin: 0 auto;
 }
 
@@ -349,8 +349,8 @@ section.chapitre4 {
   left: 50vw;
   width: 10vw;
   aspect-ratio: 1/1;
-  background-size: 100% 4800%;
-  background-image: url("../img/img_personnages/png/sprite/lyx_reveille.png");
+  background-size: 100% 1200%;
+  background-image: url("../img/img_personnages/png/sprite/lyx_reveille_optimise.png");
   margin: 0 auto;
   z-index: 3;
 }
@@ -432,8 +432,8 @@ section.chapitre5 {
   left: 0vw;
   width: 15vw;
   aspect-ratio: 1/1;
-  background-size: 100% 4800%;
-  background-image: url("../img/img_personnages/png/sprite/lyx_reveille.png");
+  background-size: 100% 1200%;
+  background-image: url("../img/img_personnages/png/sprite/lyx_reveille_optimise.png");
   margin: 0 auto;
   z-index: 2;
 }
@@ -509,8 +509,8 @@ section.chapitre6 {
   left: 40vw;
   width: 15vw;
   aspect-ratio: 1/1;
-  background-size: 100% 4800%;
-  background-image: url("../img/img_personnages/png/sprite/lyx_dors.png");
+  background-size: 100% 1200%;
+  background-image: url("../img/img_personnages/png/sprite/lyx_dors_optimise.png");
   margin: 0 auto;
   opacity: 0.5;
 }
