@@ -108,6 +108,7 @@ ul.technique-gsap {
   z-index: 1000;
   top: 0;
   left: 0;
+  display: none; /*Seulement pour évaluation*/
 }
 
 ul.technique-gsap li {
